@@ -5,6 +5,7 @@ Feature: Login
   And click login button
   Then directed to home page of saucedemo.com
 
+
 Feature: Sort item products
   Given Homepage Catalog of Swag Labs Products
   When click filter dropdown
@@ -20,6 +21,7 @@ Feature: Sort item products
   And click filter Name (Z to A)
   Then filter product by the lowest price
 
+
 Feature: Add Item to Cart
   Given Homepage Catalog of Swag Labs Products
   When click add to cart button
@@ -27,21 +29,32 @@ Feature: Add Item to Cart
   When add another item to add to cart
   When click cart icon to proceed the transactions
 
+
 Feature: Remove choosen product
   Given Homepage Catalog of Swag Labs Products
   When item are checked or added to cart
   Click remove button to remove added item on cart
   Then remove the item and empty the cart
 
+
 Feature: Checkout the item on cart
   Given Cart item detail, price and description
   When click checkout button
   Then direct to checkout personal information page
 
+
 Feature: Remove cart product item
   Given Cart item detail, price and description
   Click remove button to remove added item on cart
   Then remove the item and empty the cart
+
+
+Feature: Checkout Personal Information with empty infomation
+  Given Personal Information page
+  When keep empty first name, last name or/and postal code
+  When click continue button
+  Then shows error information cannot be empty
+
 
 Feature: Checkout Personal Information
   Given Personal Information page
@@ -49,6 +62,7 @@ Feature: Checkout Personal Information
   And input your last name
   And input your ZIP / Postal Code must be a number
   Then Click continue button
+
 
 Feature: Checkout Overview
   Given Checkout Overview detail information
