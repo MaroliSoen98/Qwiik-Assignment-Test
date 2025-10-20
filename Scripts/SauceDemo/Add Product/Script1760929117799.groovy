@@ -99,7 +99,7 @@ WebUI.verifyElementPresent(findTestObject('SwagHomePage/btn_menuSwag'), 0)
 'Click menu button'
 WebUI.click(findTestObject('SwagHomePage/btn_menuSwag'))
 
-'Verify Logout link is visible'
+'Verify Logout link are visible'
 WebUI.verifyElementPresent(findTestObject('SwagHomePage/a_logout'), 0)
 
 'Click Logout link'
